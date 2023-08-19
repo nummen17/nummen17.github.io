@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.navbar{
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+
+}
+.logo{
+    width: 30px;
+    cursor: pointer;
+    margin: 10px 0px;
+}
+.menu-icon{
+    width: 25px;
+    cursor: pointer;
+    display: none;
+
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+nav ul li a:hover{
+    color: #ff5ea2;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.col-1{
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 50px;
+}
+
+.col-1 h2{
+    font-size: 54px;
+}
+.col-1 h3{
+    font-size: 30px;
+    color: #707070;
+    font-weight: 100;
+    margin: 20px 0 10px;
+}
+.col-1p p{
+    font-size: 16px;
+    color: #b7b7b7;
+    font-weight: 100;
+}
+
+
+.col-2{
+    position: relative;
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;   
+}
+.col-2 .furina{
+    width: 50%;
+    transform: translateX(500px) translateY(-80px);
+}
+.social-links img{
+    height: 15px;
+    margin: 0px;
+    cursor: pointer;
+}
+.social-links{
+    text-align: center;
+}
+
+
+/* About me */
+
+.row1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 300px 0;
+
+}
+
+.col-3{
+    flex-basis: 45%;
+    position: relative;
+    margin-left: 50px;
+}
+
+.col-3 h2{
+    font-size: 54px;
+    margin-bottom: 15px
+}
+
+.col-3p p{
+    font-size: 16px;
+    color: #b7b7b7;
+    font-weight: 100;
+}
+.col-3::after{
+    content: '';
+    width: 10px;
+    height: 57%;
+    background: linear-gradient( #fb5283, #ff3527);
+    position: absolute;
+    left: -40px;
+    top: 8px;
+}
+
+.col-4{
+    position: relative;
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;   
+}
+.col-4 .nummen{
+    width: 30%;
+    transform: translateX(-700px) translateY(-300px);
+}
+
+.col-5{
+    position: relative;
+    flex-basis: 60%;
+}
+   
+
+.col-5::after{
+    content: '';
+    width: 10px;
+    height: 57%;
+    background: linear-gradient( #fb5283, #ff3527);
+    position: absolute;
+    left: -40px;
+    top: 8px;
+}
+
+
+
+/* Projects */
+
+#portfolio {
+    margin-top: 20px;
+}
+
+.project {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.project h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 16px;
+    color: #fff;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #d2001a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.project a:hover {
+    background-color: #7462ff;
+}
+
+
+
+
+
+/* Phone */
+
+@media only screen and (max-width:700px){
+
+    body {
+        background-size: contain; /* Use 'contain' to fit the image within the screen size */
+        background-attachment: scroll; /* Allow the background to scroll with content on smaller screens */
+        background-position: center;
+    }
+
+    nav ul{
+        width: 100%;
+        background: linear-gradient(#ff5ea2, #ff3527);
+        position: absolute;
+        top: 75px;
+        right: 0;
+        z-index: 2;
+    }
+    nav ul li{
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    nav ul a{
+        color: #ff3527;
+    }
+    .menu-icon{
+        display: block;
+        margin-right: 10px;
+        margin-top: 30px;
+
+    }
+    #menuList{
+        overflow: hidden;
+        transition: 0.5s;
+
+    }
+    .logo{
+        max-width: 50px;
+        cursor: pointer;
+    }
+
+
+    .row{
+        flex-direction: column-reverse;
+        margin: 50px 0;
+    }
+    .col2{
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+
+    .col-2 .furina{
+        width: 50%;
+        transform: translateY(0.1px);
+        transform: translateX(70px);
+    }
+    .col-1{
+        flex-basis: 100%;
+    }
+    .col-1 h2{
+        font-size: 35px;
+    }
+    .col-1 h3{
+        font-size: 35px;
+    }
+    .col-1 p{
+        font-size: 35px;
+    }
+
+    /* about me  */
+
+    .row1{
+        flex-direction: column-reverse;
+        margin: 50px 0;
+    }
+    .col3{
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+
+    .col-4 .nummen{
+        width: 60%;
+        transform: translateY(-5px) translateX(70px);
+    }
+    .col-3{
+        flex-basis: 100%;
+    }
+    .col-3 h2{
+        font-size: 35px;
+    }
+    .col-3 h3{
+        font-size: 35px;
+    }
+    .col-3 p{
+        font-size: 35px;
+    }
+}
